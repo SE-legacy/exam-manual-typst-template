@@ -3,6 +3,6 @@
 #set heading(numbering: "1.1")
 #generateAll()
 
-== Раздел 1 (если есть)
+= Раздел 1 (если есть)
 #include "questions/question1.typ"
 #pagebreak()
