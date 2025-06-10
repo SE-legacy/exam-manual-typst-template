@@ -18,6 +18,4 @@
   i += 1
 }
 
-= Раздел 1 (если есть)
-#include "questions/question1.typ"
 #pagebreak()
