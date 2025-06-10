@@ -18,3 +18,11 @@ authors = [
   "Михаил Леонтьев",
   "Маргарита Потапкина"
 ]
+
+[sections]
+numbering = true
+prefix = "Вопрос"
+sections = [
+  "Жить или не жить?"
+]
+
