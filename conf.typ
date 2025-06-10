@@ -31,8 +31,8 @@
 }
 
 
-#let theorem_end = stack(dir: ltr,
-  [Теорема доказана.],
+#let theorem_end = (text) => stack(dir: ltr,
+  text,
   align(right)[
     $qed$
   ]
@@ -53,16 +53,14 @@
 		if proof != [] {
 			par[*Доказательство*:]
 			par(proof)
-			set align(right)
-			$square.filled$
-			set align(left)
+      theorem_end(ending)
 		}
 	})
 }
 
 #let theorem = (
   name: "Теорема",
-  ending: "Теорема доказана",
+  ending: "Теорема доказана.",
   breakline: false,
   wording, proof
 ) => block_proofable(name, breakline, wording, proof, ending)
@@ -75,14 +73,14 @@
 
 #let consequence = (
   name: "Следствие",
-  ending: "Доказано",
+  ending: "Доказано.",
   breakline: false,
   wording, proof
 ) => block_proofable(name, breakline, wording, proof, ending)
 
 #let lemma = (
-  name: "Леммо",
-  ending: "Доказана",
+  name: "Лемма",
+  ending: "Лемма доказана.",
   breakline: false,
   wording, proof
 ) => block_proofable(name, breakline, wording, proof, ending)
@@ -90,7 +88,7 @@
 
 #let property = (
   name: "Свойство",
-  ending: "Доказано",
+  ending: "Доказано.",
   breakline: false,
   wording,
   proof

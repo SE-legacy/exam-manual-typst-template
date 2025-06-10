@@ -1,4 +1,4 @@
-#import "conf.typ": details, generateAll
+#import "conf.typ": details, generateAll, lemma
 #import "@preview/oxifmt:1.0.0": strfmt
 #set page(numbering: "1")
 #set heading(numbering: "1.1")
