@@ -12,7 +12,7 @@
     if details.sections.prefix.len() > 0 {
       numbering += details.sections.prefix + " "
     }
-    numbering += str(i) + ". "
+    numbering += "1.1. "
   }
   for section in details.sections.sections {
     heading(section, numbering: numbering)
