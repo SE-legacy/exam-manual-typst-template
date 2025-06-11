@@ -52,7 +52,7 @@
 		wording
 		if proof != [] {
 			par[*Доказательство*:]
-      par(proof)
+      proof
       theorem_end(ending)
 		}
 	})
