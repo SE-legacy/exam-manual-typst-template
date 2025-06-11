@@ -92,7 +92,7 @@
   breakline: false,
   wording,
   proof
-) => block_proofable(name, breakline, wording, proof)
+) => block_proofable(name, breakline, wording, proof, ending)
 
 #let lets = box(" ", stroke: (
 	top: 0.5pt, left: none, right: 0.5pt, bottom: 0.5pt
