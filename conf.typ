@@ -41,7 +41,7 @@
 #let block_base = (name, breakline, content) => {
 	[*#name*.]
 	if breakline {
-    [\ ]
+    parbreak()
 		content
 	} else {
 		h(5pt)
