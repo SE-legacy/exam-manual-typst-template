@@ -5,7 +5,8 @@
 #generateAll()
 
 #let i = 1
-#for section in details.sections.sections {
+
+#{
   let numbering = ""
   if details.sections.numbering {
     if details.sections.prefix.len() > 0 {
@@ -13,9 +14,10 @@
     }
     numbering += str(i) + ". "
   }
-  heading(section, numbering: numbering)
-  include strfmt("sections/{:02}.typ", i)
-  i += 1
+  for section in details.sections.sections {
+    heading(section, numbering: numbering)
+    include strfmt("sections/{:02}.typ", i)
+    pagebreak(weak: true)
+    i += 1
+  }
 }
-
-#pagebreak()
