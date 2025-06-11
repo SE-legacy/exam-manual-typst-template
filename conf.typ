@@ -41,7 +41,7 @@
 #let block_base = (name, breakline, content) => {
 	[*#name*.]
 	if breakline {
-		par(content)
+		content
 	} else {
 		h(5pt)
 		content
@@ -52,7 +52,7 @@
 		wording
 		if proof != [] {
 			par[*Доказательство*:]
-			par(proof)
+      par(proof)
       theorem_end(ending)
 		}
 	})
