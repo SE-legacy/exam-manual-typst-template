@@ -1,8 +1,8 @@
 #import "conf.typ": details, generateAll
 #import "@preview/oxifmt:1.0.0": strfmt
-#set page(numbering: "1")
 #set heading(numbering: "1.1")
 #generateAll()
+#set page(numbering: "1")
 
 #let i = 1
 
