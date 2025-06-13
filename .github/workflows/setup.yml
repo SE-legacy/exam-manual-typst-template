@@ -1,0 +1,20 @@
+name: Setup Repository
+on:
+  push:
+    branches: [master]
+permissions:
+  contents: write
+jobs:
+  setup:
+    if: github.run_number == 1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Change initial commit message
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git commit --amend -m "Взлетаем"
+          git push --force
