@@ -4,6 +4,9 @@
 #generateAll()
 #set page(numbering: "1")
 
+#show figure.where(kind: image): set figure(supplement: "Рис.")
+#show figure.where(kind: table): set figure(supplement: "Табл.")
+
 #let i = 1
 
 #{
